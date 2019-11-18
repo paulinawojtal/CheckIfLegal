@@ -8,6 +8,7 @@ class Creator {
 
     Board createBoard(){
         Board board = new Board();
+        board.createBoard();
         ChessBoardReader cbr = new ChessBoardReader();
         Pieces pieces = new Pieces();
 

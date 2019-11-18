@@ -13,6 +13,10 @@ public abstract class Piece {
         return figure;
     }
 
+    public PieceColor getColor() {
+        return color;
+    }
+
     void setFigure(PieceFigure figure) {
         this.figure = figure;
     }

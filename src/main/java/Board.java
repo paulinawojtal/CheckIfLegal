@@ -1,22 +1,30 @@
 class Board {
 
-    private char[][] board;
+    private String[][] board;
 
     Board() {
-        board = new char[8][8];
+        board = new String[8][8];
     }
 
-    char[][] getBoard() {
+    void createBoard(){
+        for(int i=0; i<board.length; i++){
+            for(int j=0; j<board[i].length; j++){
+                board[i][j] = " ";
+            }
+        }
+    }
+    String[][] getBoard() {
         return board;
     }
 
     void updatedBoard(Pieces pieces){
-        pieces.forEach(piece ->
-        {
-            int r = piece.getPositionR();
-            int c = piece.getPositionC();
-            board[r][c] = piece.getFigure().toString().charAt(0);
-        });
-
+        if(pieces.getPieces().size() > 0){
+            pieces.forEach(piece ->
+            {
+                int r = piece.getPositionR();
+                int c = piece.getPositionC();
+                board[r][c] = piece.getColor() + piece.getFigure().toString();
+            });
+        }
     }
 }
