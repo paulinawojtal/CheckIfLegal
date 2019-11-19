@@ -1,3 +1,5 @@
+package pieceManagement;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -6,7 +8,7 @@ public class Pieces implements Iterable<Piece> {
 
     private List<Piece> pieces;
 
-    Pieces() {
+    public Pieces() {
         pieces = new ArrayList<>();
     }
 
@@ -14,7 +16,7 @@ public class Pieces implements Iterable<Piece> {
         return pieces;
     }
 
-    void addPiece(Piece piece){
+    public void addPiece(Piece piece){
         pieces.add(piece);
     }
 

@@ -1,3 +1,5 @@
+package pieceManagement;
+
 public abstract class Piece {
 
     private PieceColor color;
@@ -9,7 +11,7 @@ public abstract class Piece {
         this.color = color;
     }
 
-    PieceFigure getFigure() {
+    public PieceFigure getFigure() {
         return figure;
     }
 
@@ -21,25 +23,25 @@ public abstract class Piece {
         this.figure = figure;
     }
 
-    void setPositionC(int positionC) {
+    public void setPositionC(int positionC) {
         this.positionC = positionC;
     }
 
-    void setPositionR(int positionR) {
+    public void setPositionR(int positionR) {
         this.positionR = positionR;
     }
 
-    int getPositionC() {
+    public int getPositionC() {
         return positionC;
     }
 
-    int getPositionR() {
+    public int getPositionR() {
         return positionR;
     }
 
     @Override
     public String toString() {
-        return "Piece{" +
+        return "pieceManagement.Piece{" +
                 "color=" + color +
                 ", figure=" + figure +
                 ", positionC=" + positionC +
