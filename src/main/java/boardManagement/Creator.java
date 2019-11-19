@@ -1,5 +1,7 @@
 package boardManagement;
 
+import pieceManagement.King;
+import pieceManagement.Piece;
 import pieceManagement.Pieces;
 
 public class Creator {
@@ -20,6 +22,7 @@ public class Creator {
         System.out.println(board.toString());
         board.updateBoard();
         System.out.println(board.toString());
+
         return board;
     }
 

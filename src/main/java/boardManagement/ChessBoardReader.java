@@ -1,5 +1,6 @@
 package boardManagement;
 
+import MoveManagement.MoveCheckerImpl;
 import pieceManagement.King;
 import pieceManagement.Piece;
 import pieceManagement.PieceColor;
@@ -44,10 +45,12 @@ class ChessBoardReader {
                     Piece p = new King(PieceColor.valueOf(Character.toString(line.charAt(0))));
                     p.setPositionC(line.charAt(3)-'A');
                     p.setPositionR(line.charAt(4) - '0');
+                    p.creteDefaultMoves();
                     pieces.addPiece(p);
                 } else if(line.startsWith(">")){
                     turn = line;
                     System.out.println(line);
+                    MoveCheckerImpl checker = new MoveCheckerImpl(line.substring(1), pieces);
                 }
             }
         } catch (IOException e) {

@@ -1,4 +1,6 @@
 import boardManagement.Creator;
+import players.HumanPlayer;
+import players.Player;
 
 import java.util.Scanner;
 
@@ -13,8 +15,9 @@ public class AppStarter {
         Scanner scan = new Scanner(System.in);
 
         Player player = new HumanPlayer("Anna");
-        System.out.println("Is board legal? enter yes or no:");
-        System.out.println(player.isBoardLegal(scan.nextLine()));
-        
+        //System.out.println("Is board legal? enter yes or no:");
+        //System.out.println(player.isBoardLegal(scan.nextLine()));
+
+
     }
 }
